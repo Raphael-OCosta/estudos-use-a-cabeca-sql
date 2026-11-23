@@ -1,0 +1,1479 @@
+{
+ "titulo": "Use a Cabeça! SQL",
+ "subtitulo": "edição em português",
+ "autor": "Lynn Beighley",
+ "repo": "estudos-use-a-cabeca-sql",
+ "linguagem": "python",
+ "paginas": 491,
+ "preparacao": "import sys\nsys.path.insert(0, \"../comum\")\nfrom banco import preparar\nmotor = preparar({CAP}, \"{MODO}\"{RECOMECAR})  # preparar(..., recomecar=True) volta o capítulo ao início\n%reload_ext sql\n%config SqlMagic.displaylimit = 60\n%config SqlMagic.feedback = 0\n%sql motor",
+ "capitulos": {
+  "1": {
+   "titulo": "Dados e Tabelas: Um lugar para cada coisa",
+   "pag": 37,
+   "secoes": [
+    [
+     2,
+     "Definindo seus dados",
+     38
+    ],
+    [
+     2,
+     "Olhe para seus dados em categorias",
+     42
+    ],
+    [
+     2,
+     "O que fica em um banco de dados?",
+     43
+    ],
+    [
+     2,
+     "Seu banco de dados visto através de uma visão raio-x",
+     45
+    ],
+    [
+     2,
+     "Bancos de dados contêm dados interligados",
+     47
+    ],
+    [
+     2,
+     "Visão de perto: Tabelas",
+     48
+    ],
+    [
+     2,
+     "Tome o comando!",
+     52
+    ],
+    [
+     2,
+     "Preparando a tabela: o comando CREATE TABLE",
+     54
+    ],
+    [
+     2,
+     "Criando uma tabela um pouco mais complicada",
+     55
+    ],
+    [
+     2,
+     "Veja como é fácil escrever em SQL",
+     56
+    ],
+    [
+     2,
+     "Finalmente, criando a tabela meus_contatos",
+     57
+    ],
+    [
+     2,
+     "Sua tabela está pronta",
+     58
+    ],
+    [
+     2,
+     "Perambulando por aí",
+     59
+    ],
+    [
+     2,
+     "Sua tabela DESCrita",
+     62
+    ],
+    [
+     2,
+     "Você não pode recriar uma tabela ou banco de dados já existente!",
+     64
+    ],
+    [
+     2,
+     "Fora com a tabela antiga, pra dentro com a nova",
+     65
+    ],
+    [
+     2,
+     "Para inserir dados na tabela, você usará o comando INSERT",
+     67
+    ],
+    [
+     2,
+     "Criando o comando INSERT",
+     69
+    ],
+    [
+     2,
+     "Variações para o comando INSERT",
+     73
+    ],
+    [
+     2,
+     "Colunas sem valores",
+     74
+    ],
+    [
+     2,
+     "Espie sua tabela com o comando SELECT",
+     75
+    ],
+    [
+     2,
+     "SQL exposto",
+     76
+    ],
+    [
+     2,
+     "Controlando seu NULL interior",
+     76
+    ],
+    [
+     2,
+     "NOT NULL aparece em DESC",
+     78
+    ],
+    [
+     2,
+     "Preencha os espaços em branco com DEFAULT",
+     79
+    ],
+    [
+     2,
+     "Sua caixa de ferramenta SQL",
+     80
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     80
+    ]
+   ]
+  },
+  "2": {
+   "titulo": "O comando SELECT: Abençoado restaurador de dados",
+   "pag": 83,
+   "secoes": [
+    [
+     2,
+     "Marcar ou não marcar um encontro?",
+     84
+    ],
+    [
+     2,
+     "Um SELECT melhor",
+     86
+    ],
+    [
+     2,
+     "Que * é esta?",
+     87
+    ],
+    [
+     2,
+     "Como fazer consultas nos seus tipos de dados",
+     92
+    ],
+    [
+     2,
+     "Mais problemas de pontuação",
+     92
+    ],
+    [
+     2,
+     "Aspas simples incompatíveis",
+     93
+    ],
+    [
+     2,
+     "Aspas simples são caracteres especiais",
+     94
+    ],
+    [
+     2,
+     "INSERT (Insira) dados com aspas simples nele",
+     95
+    ],
+    [
+     2,
+     "SELECT (selecionar) colunas específicas para limitar os resultados",
+     99
+    ],
+    [
+     2,
+     "SELECT (selecione) colunas específicas para resultados mais rápidos",
+     99
+    ],
+    [
+     2,
+     "Combinando suas consultas",
+     103
+    ],
+    [
+     2,
+     "Encontrando valores numéricos",
+     106
+    ],
+    [
+     2,
+     "Operadores de comparação sem problemas",
+     108
+    ],
+    [
+     2,
+     "Encontrando dados numéricos com operadores de comparação",
+     110
+    ],
+    [
+     2,
+     "Amarrando os dados em texto com Operadores de Comparação",
+     113
+    ],
+    [
+     2,
+     "Ser OR (ou) não ser",
+     114
+    ],
+    [
+     2,
+     "A diferença entre AND e OR",
+     116
+    ],
+    [
+     2,
+     "Usando IS NULL para encontrar NULL",
+     118
+    ],
+    [
+     2,
+     "Economizando tempo com uma simples palavra-chave: LIKE",
+     120
+    ],
+    [
+     2,
+     "O chamado do Coringa",
+     120
+    ],
+    [
+     2,
+     "Selecionando alcance usando AND e operadores de comparação",
+     123
+    ],
+    [
+     2,
+     "Bem BETWEEN (entre) nós... há um jeito melhor",
+     123
+    ],
+    [
+     2,
+     "Depois dos encontros, você está IN...",
+     125
+    ],
+    [
+     2,
+     "...ou você está NOT IN",
+     125
+    ],
+    [
+     2,
+     "Mais NOT",
+     126
+    ],
+    [
+     2,
+     "Sua caixa de ferramenta SQL",
+     130
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     130
+    ]
+   ]
+  },
+  "3": {
+   "titulo": "DELETE e UPDATE: Uma mudança fará bem a você",
+   "pag": 133,
+   "secoes": [
+    [
+     2,
+     "Palhaços são assustadores?",
+     134
+    ],
+    [
+     2,
+     "Rastreador de palhaços",
+     135
+    ],
+    [
+     2,
+     "Os palhaços estão em movimento",
+     136
+    ],
+    [
+     2,
+     "Como os nossos dados de palhaços são inseridos?",
+     140
+    ],
+    [
+     2,
+     "Bonzo, nós temos um problema",
+     141
+    ],
+    [
+     2,
+     "Eliminando um registro com DELETE",
+     142
+    ],
+    [
+     2,
+     "Usando nossa nova instrução DELETE",
+     143
+    ],
+    [
+     2,
+     "Regras do DELETE",
+     144
+    ],
+    [
+     2,
+     "Os dois passos do INSERT e DELETE",
+     147
+    ],
+    [
+     2,
+     "Cuidado com o seu DELETE",
+     152
+    ],
+    [
+     2,
+     "O problema com DELETE impreciso",
+     155
+    ],
+    [
+     2,
+     "Altere seus dados com UPDATE",
+     156
+    ],
+    [
+     2,
+     "Regras do UPDATE",
+     157
+    ],
+    [
+     2,
+     "UPDATE é o novo INSERT-DELETE",
+     158
+    ],
+    [
+     2,
+     "UPDATE em ação",
+     159
+    ],
+    [
+     2,
+     "Atualizando os movimentos dos palhaços",
+     160
+    ],
+    [
+     2,
+     "UPDATE (atualize) seus preços",
+     164
+    ],
+    [
+     2,
+     "Tudo o que precisamos é um UPDATE",
+     166
+    ],
+    [
+     2,
+     "Sua caixa de ferramenta SQL",
+     167
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     167
+    ]
+   ]
+  },
+  "4": {
+   "titulo": "Projetos de Tabelas inteligentes: Por que ser normal?",
+   "pag": 169,
+   "secoes": [
+    [
+     2,
+     "Duas tabelas de pescadores",
+     170
+    ],
+    [
+     2,
+     "Uma tabela tem tudo a ver com relacionamentos",
+     172
+    ],
+    [
+     2,
+     "Dados atômicos",
+     175
+    ],
+    [
+     2,
+     "Dados atômicos e suas tabelas",
+     176
+    ],
+    [
+     2,
+     "Regras dos dados atômicos",
+     177
+    ],
+    [
+     2,
+     "Razões para ser normal",
+     179
+    ],
+    [
+     2,
+     "O benefício de tabelas normais",
+     180
+    ],
+    [
+     2,
+     "Palhaços não são normais",
+     181
+    ],
+    [
+     2,
+     "Metade do caminho para 1NF",
+     182
+    ],
+    [
+     2,
+     "Regras da CHAVE PRIMÁRIA",
+     182
+    ],
+    [
+     2,
+     "Ficando NORMAL",
+     184
+    ],
+    [
+     2,
+     "Consertando a tabela do Greg",
+     184
+    ],
+    [
+     2,
+     "O comando CREATE TABLE que nós escrevemos",
+     185
+    ],
+    [
+     2,
+     "Mostre-me a tabela",
+     186
+    ],
+    [
+     2,
+     "Comando para economia de tempo",
+     186
+    ],
+    [
+     2,
+     "O CREATE TABLE com uma CHAVE PRIMÁRIA",
+     187
+    ],
+    [
+     2,
+     "1, 2, 3... auto incrementando",
+     188
+    ],
+    [
+     2,
+     "Adicionando uma CHAVE PRIMÁRIA a uma tabela existente",
+     191
+    ],
+    [
+     2,
+     "ALTER TABLE e adicionar uma PRIMARY KEY",
+     192
+    ],
+    [
+     2,
+     "Sua caixa de ferramenta SQL",
+     193
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     193
+    ]
+   ]
+  },
+  "5": {
+   "titulo": "ALTER: Reescrevendo o passado",
+   "pag": 195,
+   "secoes": [
+    [
+     2,
+     "Nós precisamos fazer algumas mudanças",
+     196
+    ],
+    [
+     2,
+     "Alterações de tabelas",
+     200
+    ],
+    [
+     2,
+     "Reconstrução total de tabelas",
+     201
+    ],
+    [
+     2,
+     "Renomeando a tabela",
+     201
+    ],
+    [
+     2,
+     "Nós precisamos fazer alguns planejamentos",
+     203
+    ],
+    [
+     2,
+     "Reinstrumentalizando nossas colunas",
+     203
+    ],
+    [
+     2,
+     "Mudanças estruturais",
+     204
+    ],
+    [
+     2,
+     "ALTER e CHANGE",
+     204
+    ],
+    [
+     2,
+     "Altere duas colunas com apenas um comando SQL",
+     205
+    ],
+    [
+     2,
+     "Rápido! Largue esta coluna!",
+     208
+    ],
+    [
+     2,
+     "Um olhar de perto para a coluna não-atômica local",
+     213
+    ],
+    [
+     2,
+     "Procure por padrões",
+     214
+    ],
+    [
+     2,
+     "Algumas funções de texto muito úteis",
+     214
+    ],
+    [
+     2,
+     "Utilize uma coluna atual para preencher uma nova coluna",
+     217
+    ],
+    [
+     2,
+     "Como funciona nosso combo UPDATE e SET?",
+     218
+    ],
+    [
+     2,
+     "Sua caixa de ferramenta SQL",
+     220
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     220
+    ]
+   ]
+  },
+  "6": {
+   "titulo": "SELECT avançado: Ver os seus dados com novos olhos",
+   "pag": 223,
+   "secoes": [
+    [
+     2,
+     "Dataville Vídeo está se reorganizando",
+     224
+    ],
+    [
+     2,
+     "Problemas com nossa tabela atual",
+     225
+    ],
+    [
+     2,
+     "Combinando dados existentes",
+     226
+    ],
+    [
+     2,
+     "Povoando sua nova coluna",
+     226
+    ],
+    [
+     2,
+     "UPDATE com uma expressão CASE",
+     229
+    ],
+    [
+     2,
+     "Parece que temos um problema",
+     231
+    ],
+    [
+     2,
+     "As tabelas podem ficar bem bagunçadas",
+     235
+    ],
+    [
+     2,
+     "Nós precisamos de uma maneira de organizar os dados que selecionamos",
+     236
+    ],
+    [
+     2,
+     "Tente um simples ORDER BY",
+     239
+    ],
+    [
+     2,
+     "ORDER (Ordene) uma só coluna",
+     240
+    ],
+    [
+     2,
+     "ORDER com duas colunas",
+     243
+    ],
+    [
+     2,
+     "ORDER com colunas múltiplas",
+     243
+    ],
+    [
+     2,
+     "Uma tabela_filme organizada",
+     245
+    ],
+    [
+     2,
+     "Inverta o comando ORDER com DESC",
+     246
+    ],
+    [
+     2,
+     "O problema da líder de vendas de biscoitos das Bandeirantes",
+     248
+    ],
+    [
+     2,
+     "SUM pode somá-las para nós",
+     250
+    ],
+    [
+     2,
+     "SUM (some) todas de uma vez com GROUP BY",
+     251
+    ],
+    [
+     2,
+     "AVG combinada com GROUP BY",
+     252
+    ],
+    [
+     2,
+     "MIN e MAX",
+     253
+    ],
+    [
+     2,
+     "COUNT (conte) os dias",
+     253
+    ],
+    [
+     2,
+     "SELECT DISTINCT (selecione diferentes) valores",
+     255
+    ],
+    [
+     2,
+     "LIMIT (limite) o número de resultados",
+     257
+    ],
+    [
+     2,
+     "LIMIT (limite) apenas para a segunda colocada",
+     258
+    ],
+    [
+     2,
+     "Sua caixa de ferramenta SQL",
+     260
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     260
+    ]
+   ]
+  },
+  "7": {
+   "titulo": "Projeto de Banco de dados multi-tabelas: Povoando sua tabela",
+   "pag": 263,
+   "secoes": [
+    [
+     2,
+     "Encontrando uma namorada para Nigel",
+     264
+    ],
+    [
+     2,
+     "Tudo foi em vão... Mas espere",
+     273
+    ],
+    [
+     2,
+     "Pense além da tabela única",
+     274
+    ],
+    [
+     2,
+     "O banco de dados rastreador de palhaços de múltiplas tabelas",
+     275
+    ],
+    [
+     2,
+     "O esquema do banco de dados rastreador_palhaco",
+     276
+    ],
+    [
+     2,
+     "Como ir de uma tabela para duas",
+     277
+    ],
+    [
+     2,
+     "Conectando suas tabelas",
+     279
+    ],
+    [
+     2,
+     "Restringindo sua chave externa",
+     282
+    ],
+    [
+     2,
+     "Por que se importar com chaves estrangeiras?",
+     282
+    ],
+    [
+     2,
+     "CREATE uma tabela com uma CHAVE ESTRANGEIRA",
+     283
+    ],
+    [
+     2,
+     "Relacionamentos entre tabelas",
+     285
+    ],
+    [
+     2,
+     "Padrões de dados: um-a-um",
+     285
+    ],
+    [
+     2,
+     "Padrões de dados: quando usar tabelas um-a-um",
+     286
+    ],
+    [
+     2,
+     "Padrões de dados: um-para-muitos",
+     286
+    ],
+    [
+     2,
+     "Padrões de dados: chegando ao muitos-para-muitos",
+     287
+    ],
+    [
+     2,
+     "Padrões de dados: nós precisamos de uma junction table",
+     289
+    ],
+    [
+     2,
+     "Padrões de dados: muitos-para-muitos",
+     290
+    ],
+    [
+     2,
+     "Finalmente 1NF",
+     294
+    ],
+    [
+     2,
+     "Chaves compostas utilizam múltiplas colunas",
+     294
+    ],
+    [
+     2,
+     "Notas de atalho",
+     296
+    ],
+    [
+     2,
+     "Dependência Funcional Parcial",
+     298
+    ],
+    [
+     2,
+     "Dependência Funcional Transitória",
+     298
+    ],
+    [
+     2,
+     "Segunda Forma Normal",
+     301
+    ],
+    [
+     2,
+     "Terceira Forma Normal (finalmente)",
+     306
+    ],
+    [
+     2,
+     "E, então, Regis (e gregs_list) viveram felizes para sempre",
+     308
+    ],
+    [
+     2,
+     "Sua caixa de ferramenta SQL",
+     309
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     309
+    ]
+   ]
+  },
+  "8": {
+   "titulo": "Conexões e Operações de multi-tabelas: Não podemos todos nos entender?",
+   "pag": 313,
+   "secoes": [
+    [
+     2,
+     "Ainda repetindo, repetindo...",
+     314
+    ],
+    [
+     2,
+     "Pré-povoando suas tabelas",
+     315
+    ],
+    [
+     2,
+     "Nós tocamos o samba esta tabela não é fácil de normalizar",
+     317
+    ],
+    [
+     2,
+     "Os interesses especiais (coluna)",
+     317
+    ],
+    [
+     2,
+     "Mantenha-se interessado",
+     318
+    ],
+    [
+     2,
+     "UPDATE todos seus interesses",
+     319
+    ],
+    [
+     2,
+     "Pegando todos os interesses",
+     320
+    ],
+    [
+     2,
+     "Muitos caminhos para um só lugar",
+     321
+    ],
+    [
+     2,
+     "CREATE, SELECT, e INSERT a (quase) o mesmo tempo",
+     321
+    ],
+    [
+     2,
+     "CREATE, SELECT e INSERT ao mesmo tempo",
+     322
+    ],
+    [
+     2,
+     "O que há com este AS?",
+     322
+    ],
+    [
+     2,
+     "Pseudônimos de coluna",
+     323
+    ],
+    [
+     2,
+     "Pseudônimos de tabelas, quem precisa deles?",
+     324
+    ],
+    [
+     2,
+     "Tudo o que você gostaria de saber sobre conexões internas",
+     324
+    ],
+    [
+     2,
+     "Conexão cartesiana",
+     325
+    ],
+    [
+     2,
+     "Liberando sua conexão interna",
+     329
+    ],
+    [
+     2,
+     "A conexão interna em ação: a equijoin",
+     329
+    ],
+    [
+     2,
+     "A conexão interna em ação: a não-equijoin",
+     332
+    ],
+    [
+     2,
+     "A última conexão interna: a conexão natural",
+     334
+    ],
+    [
+     2,
+     "Consultas conectadas?",
+     339
+    ],
+    [
+     2,
+     "Pseudônimos de Colunas e Tabelas Revelados",
+     340
+    ],
+    [
+     2,
+     "Sua caixa de ferramentas SQL",
+     341
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     341
+    ]
+   ]
+  },
+  "9": {
+   "titulo": "Subconsultas: Consultas dentro de Consultas",
+   "pag": 343,
+   "secoes": [
+    [
+     2,
+     "Greg entra no negócio de recrutamento laboral",
+     344
+    ],
+    [
+     2,
+     "A gregs_list fica com mais tabelas",
+     345
+    ],
+    [
+     2,
+     "Greg utiliza uma conexão interior",
+     346
+    ],
+    [
+     2,
+     "Mas ele quer tentar algumas outras consultas",
+     347
+    ],
+    [
+     2,
+     "Subconsultas",
+     348
+    ],
+    [
+     2,
+     "Nós combinamos as duas em uma consulta com uma subconsulta",
+     350
+    ],
+    [
+     2,
+     "Como se uma consulta já não fosse o bastante, conheça a subconsulta",
+     351
+    ],
+    [
+     2,
+     "Uma subconsulta em ação",
+     351
+    ],
+    [
+     2,
+     "Regras para subconsultas",
+     353
+    ],
+    [
+     2,
+     "Um acompanhamento na construção de uma subconsulta",
+     355
+    ],
+    [
+     2,
+     "Uma subconsulta como uma coluna no comando SELECT",
+     358
+    ],
+    [
+     2,
+     "Outro exemplo: Subconsulta com uma conexão natural",
+     359
+    ],
+    [
+     2,
+     "Uma consulta não-correlacionada",
+     360
+    ],
+    [
+     2,
+     "Uma subconsulta não-correlacionada com múltiplos valores: IN, NOT IN",
+     364
+    ],
+    [
+     2,
+     "Subconsultas correlacionadas",
+     368
+    ],
+    [
+     2,
+     "Uma subconsulta correlacionada (útil) com NOT EXISTS",
+     368
+    ],
+    [
+     2,
+     "EXISTS e NOT EXISTS",
+     369
+    ],
+    [
+     2,
+     "A empresa de Greg para serviços de recrutamento está aberta para negócios",
+     370
+    ],
+    [
+     2,
+     "Ao caminho da festa",
+     371
+    ],
+    [
+     2,
+     "Sua caixa de ferramentas SQL",
+     372
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     372
+    ]
+   ]
+  },
+  "10": {
+   "titulo": "Conexões externas, intraconexões e uniões: Novas manobras",
+   "pag": 375,
+   "secoes": [
+    [
+     2,
+     "Limpando os dados antigos",
+     376
+    ],
+    [
+     2,
+     "É uma questão de esquerda e direita",
+     376
+    ],
+    [
+     2,
+     "Aqui está uma conexão externa esquerda",
+     377
+    ],
+    [
+     2,
+     "Conexões externas e combinações múltiplas",
+     382
+    ],
+    [
+     2,
+     "Conexão externa direita",
+     383
+    ],
+    [
+     2,
+     "Enquanto você estava conectando externamente...",
+     384
+    ],
+    [
+     2,
+     "Nós poderíamos criar uma nova tabela",
+     385
+    ],
+    [
+     2,
+     "Como a nova tabela se encaixa",
+     386
+    ],
+    [
+     2,
+     "Uma chave externa auto-referenciada",
+     386
+    ],
+    [
+     2,
+     "Conecte uma tabela a ela mesma",
+     387
+    ],
+    [
+     2,
+     "Nós precisamos de uma autoconexão (SELF-JOIN)",
+     388
+    ],
+    [
+     2,
+     "Outra forma de obter informações multi-tabelas",
+     389
+    ],
+    [
+     2,
+     "Você pode utilizar uma UNION (UNIÃO)",
+     390
+    ],
+    [
+     2,
+     "UNION é limitado",
+     391
+    ],
+    [
+     2,
+     "Regras do UNION em ação",
+     391
+    ],
+    [
+     2,
+     "UNION ALL",
+     392
+    ],
+    [
+     2,
+     "Crie uma tabela a partir da sua UNION",
+     393
+    ],
+    [
+     2,
+     "INTERSECT e EXCEPT",
+     393
+    ],
+    [
+     2,
+     "Nós já tivemos o suficiente de conexões",
+     394
+    ],
+    [
+     2,
+     "Subconsultas e conexões comparadas",
+     394
+    ],
+    [
+     2,
+     "Transformando uma subconsulta em uma conexão",
+     395
+    ],
+    [
+     2,
+     "Um autorrelacionamento como uma subconsulta",
+     399
+    ],
+    [
+     2,
+     "A companhia do Greg está crescendo",
+     399
+    ],
+    [
+     2,
+     "Sua caixa de ferramentas SQL",
+     401
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     401
+    ]
+   ]
+  },
+  "11": {
+   "titulo": "Constraints, views e transactions: Cozinhar demais pode estragar o banco de dados",
+   "pag": 406,
+   "secoes": [
+    [
+     2,
+     "Greg contratou ajuda",
+     407
+    ],
+    [
+     2,
+     "Primeiro dia de Jim: Inserindo um novo cliente",
+     408
+    ],
+    [
+     2,
+     "Jim evita NULL",
+     409
+    ],
+    [
+     2,
+     "Antecipando três meses",
+     409
+    ],
+    [
+     2,
+     "CHECK, por favor: Adicionando uma CHECK CONSTRAINT",
+     410
+    ],
+    [
+     2,
+     "CHECKando o sexo",
+     411
+    ],
+    [
+     2,
+     "O trabalho de Frank ficou tedioso",
+     412
+    ],
+    [
+     2,
+     "Criando uma view",
+     414
+    ],
+    [
+     2,
+     "Visualizando suas views",
+     414
+    ],
+    [
+     2,
+     "O que sua view está realmente fazendo",
+     415
+    ],
+    [
+     2,
+     "O que é uma view",
+     416
+    ],
+    [
+     2,
+     "Inserindo, atualizando e deletando com views",
+     419
+    ],
+    [
+     2,
+     "O segredo é fingir que a view é uma tabela de verdade",
+     419
+    ],
+    [
+     2,
+     "View com CHECK OPTION",
+     422
+    ],
+    [
+     2,
+     "Sua view pode ser atualizável, se...",
+     422
+    ],
+    [
+     2,
+     "Quando você tiver terminado com sua view",
+     423
+    ],
+    [
+     2,
+     "Quando coisas ruins acontecem com bons bancos de dados",
+     424
+    ],
+    [
+     2,
+     "O que aconteceu dentro do caixa eletrônico?",
+     425
+    ],
+    [
+     2,
+     "Mais problemas no CAIXA ELETRÔNICO",
+     426
+    ],
+    [
+     2,
+     "Isto não é um sonho, é uma transação",
+     427
+    ],
+    [
+     2,
+     "O teste clássico ACID",
+     428
+    ],
+    [
+     2,
+     "SQL ajuda a gerenciar suas transações",
+     429
+    ],
+    [
+     2,
+     "O que deveria ter acontecido dentro do Caixa eletrônico",
+     430
+    ],
+    [
+     2,
+     "Como fazer as transações funcionarem com MySQL",
+     431
+    ],
+    [
+     2,
+     "Agora tente você mesmo",
+     432
+    ],
+    [
+     2,
+     "Sua caixa de ferramentas SQL",
+     435
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     435
+    ]
+   ]
+  },
+  "12": {
+   "titulo": "Segurança: protegendo suas riquezas",
+   "pag": 438,
+   "secoes": [
+    [
+     2,
+     "Problema de usuários",
+     439
+    ],
+    [
+     2,
+     "Evitando erros no banco de dados rastreador de palhaços",
+     439
+    ],
+    [
+     2,
+     "Proteja a conta de usuários raiz",
+     441
+    ],
+    [
+     2,
+     "Adicione um novo usuário",
+     442
+    ],
+    [
+     2,
+     "Decida exatamente o que o usuário necessita",
+     442
+    ],
+    [
+     2,
+     "Um simples comando GRANT",
+     443
+    ],
+    [
+     2,
+     "Variações do comando GRANT",
+     446
+    ],
+    [
+     2,
+     "REVOKE (REVOGUE) privilégios",
+     447
+    ],
+    [
+     2,
+     "REVOGANDO uma GRANT OPTION usada",
+     447
+    ],
+    [
+     2,
+     "REVOGANDO com mais precisão",
+     448
+    ],
+    [
+     2,
+     "O problema com contas partilhadas",
+     451
+    ],
+    [
+     2,
+     "Utilizando sua role",
+     452
+    ],
+    [
+     2,
+     "Eliminando roles",
+     453
+    ],
+    [
+     2,
+     "Utilizando sua role WITH ADMIN OPTION",
+     454
+    ],
+    [
+     2,
+     "Combinando CREATE USER com GRANT",
+     458
+    ],
+    [
+     2,
+     "A lista de Greg agora é global!",
+     459
+    ],
+    [
+     2,
+     "Sua caixa de ferramentas SQL",
+     461
+    ],
+    [
+     2,
+     "Utilize SQL em seus próprios projetos",
+     463
+    ],
+    [
+     2,
+     "Resumo e anotações finais",
+     463
+    ]
+   ]
+  }
+ },
+ "extra_html": "\n<section class=\"pg\">\n  <h2>Particularidades deste livro</h2>\n  <h3>O banco de dados: PostgreSQL no Docker</h3>\n  <p>O livro usa MySQL. Aqui o banco é um <b>PostgreSQL</b> num container do Docker, só para estes estudos (porta 5434).\n  Ele é necessário porque os capítulos 4, 5, 11 e 12 usam <code>ALTER</code> de verdade, views atualizáveis, transações e usuários com <code>GRANT</code>, que o SQLite não tem.</p>\n  <div class=\"passo\"><div class=\"n\">1</div><div>Abra o <b>Docker Desktop</b> e espere aparecer <i>Engine running</i>.</div></div>\n  <div class=\"passo\"><div class=\"n\">2</div><div>No VS Code, abra um terminal na pasta deste livro (<b>Terminal → New Terminal</b>) e rode <code>docker compose up -d</code>. Isso é preciso só na primeira vez: depois o banco sobe sozinho junto com o Docker.</div></div>\n  <div class=\"passo\"><div class=\"n\">3</div><div>No caderno, rode a <b>Preparação</b>. Deve aparecer <i>Pronto. Esquema cap01 | tabelas: ...</i></div></div>\n  <h3>Como escrever SQL no caderno</h3>\n  <p>A célula que começa com <code>%%sql</code> é SQL puro: digite os comandos embaixo dessa linha, cada um terminado por <code>;</code>. A tabela mostrada é a do <b>último</b> comando. Cada capítulo tem um <b>esquema</b> próprio (cap01, cap02...), que funciona como um banco separado. Errou tudo e quer recomeçar o capítulo? Na Preparação, troque para <code>preparar(N, \"praticar\", recomecar=True)</code>, rode uma vez e volte ao normal.</p>\n  <h3>MySQL do livro × PostgreSQL daqui</h3>\n  <table><tr><th>No livro (MySQL)</th><th>Aqui (PostgreSQL)</th></tr>\n  <tr><td><code>CREATE DATABASE</code> / <code>USE</code></td><td>um esquema por capítulo, já selecionado pela Preparação</td></tr>\n  <tr><td><code>DESC tabela</code></td><td>consulta em <code>information_schema.columns</code> (está no cap. 1)</td></tr>\n  <tr><td><code>AUTO_INCREMENT</code></td><td><code>SERIAL</code></td></tr>\n  <tr><td><code>CHANGE</code> / <code>MODIFY</code></td><td><code>RENAME COLUMN</code> e <code>ALTER COLUMN ... TYPE</code></td></tr>\n  <tr><td><code>SUBSTRING_INDEX</code></td><td><code>split_part</code></td></tr>\n  <tr><td><code>LIMIT 1, 1</code></td><td><code>LIMIT 1 OFFSET 1</code></td></tr>\n  <tr><td><code>START TRANSACTION</code></td><td><code>BEGIN</code></td></tr>\n  <tr><td><code>CREATE USER</code> / roles</td><td><code>CREATE ROLE ... LOGIN</code>, <code>SET ROLE</code> para testar</td></tr>\n  <tr><td>sem INTERSECT/EXCEPT/FULL JOIN</td><td>o PostgreSQL tem os três (cap. 10)</td></tr></table>\n  <div class=\"box aviso\">Para olhar as tabelas também no DBeaver: nova conexão PostgreSQL, host <code>127.0.0.1</code>, porta <code>5434</code>, banco <code>use_a_cabeca</code>, usuário e senha <code>estudos</code> (banco local de estudo).</div>\n</section>\n"
+}

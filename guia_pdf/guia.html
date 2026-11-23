@@ -1,0 +1,116 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Guia de Estudos</title><style>
+@page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Segoe UI",Calibri,Arial,sans-serif;color:#1f2933;font-size:11pt;line-height:1.55;margin:0}
+.pg{break-after:page}
+.capa{height:250mm;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(160deg,#1f4e79,#2f7d6d);color:#fff;border-radius:10px;padding:0 16mm}
+.capa .tag{letter-spacing:.2em;text-transform:uppercase;font-size:10pt;opacity:.85}
+.capa h1{font-size:30pt;margin:4mm 0 2mm;line-height:1.15}.capa h2{font-weight:400;font-size:15pt;margin:0 0 10mm;opacity:.95;border:0;color:#fff}
+.capa .lema{font-size:13pt;border-left:4px solid #9fe0c9;padding-left:5mm;max-width:140mm}
+h2{color:#1f4e79;font-size:18pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:2px solid #e6eef6}
+h3{color:#1f4e79;font-size:13pt;margin:6mm 0 2mm}
+code{font-family:Consolas,monospace;font-size:9.5pt;background:#f2f5f8;padding:0 4px;border-radius:3px}
+kbd{border:1px solid #c9d2db;border-bottom-width:2px;border-radius:4px;padding:0 5px;font-size:9.5pt;background:#fff}
+.passo{display:flex;gap:4mm;margin:0 0 3.5mm;break-inside:avoid}
+.n{flex:0 0 9mm;height:9mm;border-radius:50%;background:#1f4e79;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.ok{color:#2e7d5b;font-size:10pt}
+.box{border-radius:7px;padding:3mm 5mm;margin:3mm 0;break-inside:avoid}
+.dica{background:#e8f5ee;border-left:4px solid #2e7d5b}.aviso{background:#fff5df;border-left:4px solid #a86b00}
+table{border-collapse:collapse;width:100%;font-size:10pt;margin:2mm 0}
+th{background:#1f4e79;color:#fff;text-align:left;padding:2mm}td{padding:1.6mm 2mm;border-bottom:1px solid #e3e8ee}
+tr:nth-child(even) td{background:#f7f9fb}
+.linha{display:flex;gap:3mm;margin:2mm 0}.min{flex:0 0 22mm;font-weight:700;color:#2f7d6d}
+</style></head><body>
+<section class="pg capa">
+  <div class="tag">Guia de estudos · ler + praticar</div>
+  <h1>Use a Cabeça! SQL</h1>
+  <h2>edição em português — Lynn Beighley</h2>
+  <p class="lema">A melhor forma de estudar um livro técnico: <b>ler um trecho e, em seguida, escrever o código com as próprias mãos</b>.
+  Este guia mostra o caminho, do primeiro clique à rotina diária.</p>
+</section>
+
+<section class="pg">
+  <h2>1. O método: ler e praticar</h2>
+  <p>Ler sem praticar dá a sensação de que você entendeu. Praticar sem ler vira copiar e colar. Os dois juntos fixam o conteúdo:</p>
+  <div class="passo"><div class="n">1</div><div><b>Leia</b> uma seção no PDF (o caderno diz a página).</div></div>
+  <div class="passo"><div class="n">2</div><div><b>Escreva</b> a solução do exercício na célula vazia do caderno de <code>praticar/</code>. Errar faz parte.</div></div>
+  <div class="passo"><div class="n">3</div><div><b>Confira</b> com o gabarito em <code>resolvidos/</code> só depois de tentar.</div></div>
+  <div class="passo"><div class="n">4</div><div><b>Resuma</b> nas células com as suas palavras. Se não conseguir explicar, releia.</div></div>
+  <div class="passo"><div class="n">5</div><div><b>Salve no GitHub</b> (commit + push): seu progresso fica registrado e público.</div></div>
+  <h3>O que tem na pasta</h3>
+  <table><tr><th>Pasta/arquivo</th><th>Para que serve</th></tr>
+  <tr><td><code>praticar/</code></td><td>Cadernos com células vazias para <b>você</b> escrever.</td></tr>
+  <tr><td><code>resolvidos/</code></td><td>Gabarito de cada exercício.</td></tr>
+  <tr><td><code>comum/exercicios.py</code></td><td>Fonte dos 140 exercícios (enunciado + solução).</td></tr>
+  <tr><td><code>ferramentas/</code></td><td>Scripts que geram os cadernos, o guia e testam o gabarito.</td></tr>
+  <tr><td><code>.venv/</code></td><td>O Python deste livro com as bibliotecas. Não mexa.</td></tr></table>
+  <div class="box aviso">O PDF do livro <b>não</b> fica no repositório (direitos autorais). Use a sua cópia.</div>
+</section>
+
+<section class="pg">
+  <h2>2. Primeira vez (uma vez só)</h2>
+  <div class="passo"><div class="n">1</div><div>Abra o VS Code pelo atalho <b>Projetos e Estudos</b> da Área de Trabalho. A pasta deste livro aparece na barra da esquerda.<div class="ok">Você deve ver as pastas praticar/ e resolvidos/.</div></div></div>
+  <div class="passo"><div class="n">2</div><div>Se aparecer “Do you trust the authors…”, clique em <b>Yes, I trust the authors</b>.</div></div>
+  <div class="passo"><div class="n">3</div><div>Abra <code>praticar/cap01_…ipynb</code>. No canto superior direito, clique em <b>Select Kernel</b> → <b>Python Environments</b> → <b>.venv (Python 3.12)</b> desta pasta.</div></div>
+  <div class="passo"><div class="n">4</div><div>Clique na célula <b>Preparação</b> e aperte <kbd>Shift</kbd>+<kbd>Enter</kbd>.<div class="ok">Aparece “Pronto.” com a versão da biblioteca.</div></div></div>
+  <div class="passo"><div class="n">5</div><div>Abra o PDF do livro ao lado (ou em outra tela) na página indicada no topo do caderno.</div></div>
+  <h3>Problemas comuns</h3>
+  <table><tr><th>O que aparece</th><th>O que fazer</th></tr>
+  <tr><td>“requires ipykernel” / kernel não inicia</td><td>Escolha o kernel <b>.venv (Python 3.12)</b> desta pasta, não outro Python. Se continuar: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> → <b>Reload Window</b>.</td></tr>
+  <tr><td><code>NameError</code></td><td>Uma célula de cima não foi rodada. Rode a Preparação e as anteriores.</td></tr>
+  <tr><td><code>ModuleNotFoundError</code></td><td>Kernel errado (veja a 1ª linha).</td></tr>
+  <tr><td>Célula “rodando” para sempre</td><td>Botão <b>Interrupt</b> (■) ou <b>Restart</b> no topo do caderno.</td></tr></table>
+</section>
+
+<section class="pg">
+  <h2>3. A rotina de 60 minutos</h2>
+  <div class="linha"><div class="min">0–5 min</div><div>Abra o caderno do capítulo e rode a Preparação. Releia suas anotações da última vez.</div></div>
+  <div class="linha"><div class="min">5–30 min</div><div>Leia a próxima seção no PDF. Teste os exemplos do livro numa célula nova (<kbd>B</kbd> cria uma célula abaixo).</div></div>
+  <div class="linha"><div class="min">30–50 min</div><div>Resolva o exercício sem olhar o gabarito. Travou por 10 minutos? Olhe, entenda e reescreva sem copiar.</div></div>
+  <div class="linha"><div class="min">50–55 min</div><div>Escreva o resumo da seção.</div></div>
+  <div class="linha"><div class="min">55–60 min</div><div>Salve e envie para o GitHub (abaixo).</div></div>
+  <h3>Salvar o progresso no GitHub</h3>
+  <div class="passo"><div class="n">1</div><div>No VS Code, clique no ícone <b>Source Control</b> (3º da barra esquerda) e escolha o repositório <b>use_a_cabeca_sql</b>.</div></div>
+  <div class="passo"><div class="n">2</div><div>Escreva uma mensagem curta, por ex.: <code>cap03: produto escalar e inversa</code>.</div></div>
+  <div class="passo"><div class="n">3</div><div>Clique em <b>Commit</b> (se perguntar sobre “stage”, responda <b>Yes</b>) e depois em <b>Sync Changes</b>.<div class="ok">No site do GitHub, o repositório mostra o seu commit.</div></div></div>
+  <div class="box dica">Ritmo sugerido: cerca de 16 sessões por semana até terminar as 491 páginas. Constância vale mais que velocidade.</div>
+</section>
+
+
+<section class="pg">
+  <h2>Particularidades deste livro</h2>
+  <h3>O banco de dados: PostgreSQL no Docker</h3>
+  <p>O livro usa MySQL. Aqui o banco é um <b>PostgreSQL</b> num container do Docker, só para estes estudos (porta 5434).
+  Ele é necessário porque os capítulos 4, 5, 11 e 12 usam <code>ALTER</code> de verdade, views atualizáveis, transações e usuários com <code>GRANT</code>, que o SQLite não tem.</p>
+  <div class="passo"><div class="n">1</div><div>Abra o <b>Docker Desktop</b> e espere aparecer <i>Engine running</i>.</div></div>
+  <div class="passo"><div class="n">2</div><div>No VS Code, abra um terminal na pasta deste livro (<b>Terminal → New Terminal</b>) e rode <code>docker compose up -d</code>. Isso é preciso só na primeira vez: depois o banco sobe sozinho junto com o Docker.</div></div>
+  <div class="passo"><div class="n">3</div><div>No caderno, rode a <b>Preparação</b>. Deve aparecer <i>Pronto. Esquema cap01 | tabelas: ...</i></div></div>
+  <h3>Como escrever SQL no caderno</h3>
+  <p>A célula que começa com <code>%%sql</code> é SQL puro: digite os comandos embaixo dessa linha, cada um terminado por <code>;</code>. A tabela mostrada é a do <b>último</b> comando. Cada capítulo tem um <b>esquema</b> próprio (cap01, cap02...), que funciona como um banco separado. Errou tudo e quer recomeçar o capítulo? Na Preparação, troque para <code>preparar(N, "praticar", recomecar=True)</code>, rode uma vez e volte ao normal.</p>
+  <h3>MySQL do livro × PostgreSQL daqui</h3>
+  <table><tr><th>No livro (MySQL)</th><th>Aqui (PostgreSQL)</th></tr>
+  <tr><td><code>CREATE DATABASE</code> / <code>USE</code></td><td>um esquema por capítulo, já selecionado pela Preparação</td></tr>
+  <tr><td><code>DESC tabela</code></td><td>consulta em <code>information_schema.columns</code> (está no cap. 1)</td></tr>
+  <tr><td><code>AUTO_INCREMENT</code></td><td><code>SERIAL</code></td></tr>
+  <tr><td><code>CHANGE</code> / <code>MODIFY</code></td><td><code>RENAME COLUMN</code> e <code>ALTER COLUMN ... TYPE</code></td></tr>
+  <tr><td><code>SUBSTRING_INDEX</code></td><td><code>split_part</code></td></tr>
+  <tr><td><code>LIMIT 1, 1</code></td><td><code>LIMIT 1 OFFSET 1</code></td></tr>
+  <tr><td><code>START TRANSACTION</code></td><td><code>BEGIN</code></td></tr>
+  <tr><td><code>CREATE USER</code> / roles</td><td><code>CREATE ROLE ... LOGIN</code>, <code>SET ROLE</code> para testar</td></tr>
+  <tr><td>sem INTERSECT/EXCEPT/FULL JOIN</td><td>o PostgreSQL tem os três (cap. 10)</td></tr></table>
+  <div class="box aviso">Para olhar as tabelas também no DBeaver: nova conexão PostgreSQL, host <code>127.0.0.1</code>, porta <code>5434</code>, banco <code>use_a_cabeca</code>, usuário e senha <code>estudos</code> (banco local de estudo).</div>
+</section>
+
+<section class="pg">
+  <h2>4. Mapa dos capítulos</h2>
+  <table><tr><th>Cap.</th><th>Título</th><th>PDF p.</th><th>Caderno</th><th>Exercícios</th></tr><tr><td>1</td><td>Dados e Tabelas: Um lugar para cada coisa</td><td>37</td><td><code>cap01_dados_e_tabelas_um_lugar_para_cada_coisa</code></td><td>13</td></tr><tr><td>2</td><td>O comando SELECT: Abençoado restaurador de dados</td><td>83</td><td><code>cap02_o_comando_select_abencoado_restaurador_d</code></td><td>16</td></tr><tr><td>3</td><td>DELETE e UPDATE: Uma mudança fará bem a você</td><td>133</td><td><code>cap03_delete_e_update_uma_mudanca_fara_bem_a_v</code></td><td>9</td></tr><tr><td>4</td><td>Projetos de Tabelas inteligentes: Por que ser normal?</td><td>169</td><td><code>cap04_projetos_de_tabelas_inteligentes_por_que</code></td><td>7</td></tr><tr><td>5</td><td>ALTER: Reescrevendo o passado</td><td>195</td><td><code>cap05_alter_reescrevendo_o_passado</code></td><td>10</td></tr><tr><td>6</td><td>SELECT avançado: Ver os seus dados com novos olhos</td><td>223</td><td><code>cap06_select_avancado_ver_os_seus_dados_com_no</code></td><td>15</td></tr><tr><td>7</td><td>Projeto de Banco de dados multi-tabelas: Povoando sua tabela</td><td>263</td><td><code>cap07_projeto_de_banco_de_dados_multi_tabelas</code></td><td>10</td></tr><tr><td>8</td><td>Conexões e Operações de multi-tabelas: Não podemos todos nos entender?</td><td>313</td><td><code>cap08_conexoes_e_operacoes_de_multi_tabelas_na</code></td><td>11</td></tr><tr><td>9</td><td>Subconsultas: Consultas dentro de Consultas</td><td>343</td><td><code>cap09_subconsultas_consultas_dentro_de_consult</code></td><td>11</td></tr><tr><td>10</td><td>Conexões externas, intraconexões e uniões: Novas manobras</td><td>375</td><td><code>cap10_conexoes_externas_intraconexoes_e_unioes</code></td><td>13</td></tr><tr><td>11</td><td>Constraints, views e transactions: Cozinhar demais pode estragar o banco de dados</td><td>406</td><td><code>cap11_constraints_views_e_transactions_cozinha</code></td><td>12</td></tr><tr><td>12</td><td>Segurança: protegendo suas riquezas</td><td>438</td><td><code>cap12_seguranca_protegendo_suas_riquezas</code></td><td>13</td></tr></table>
+  <p>"leitura" = capítulo só de leitura: use as células de anotações. Total: <b>140 exercícios</b>.</p>
+  <h3>Atalhos que você vai usar</h3>
+  <table><tr><th>Atalho</th><th>O que faz</th></tr>
+  <tr><td><kbd>Shift</kbd>+<kbd>Enter</kbd></td><td>Roda a célula e vai para a próxima</td></tr>
+  <tr><td><kbd>Ctrl</kbd>+<kbd>Enter</kbd></td><td>Roda a célula e fica nela</td></tr>
+  <tr><td><kbd>Esc</kbd> e <kbd>B</kbd> / <kbd>A</kbd></td><td>Nova célula abaixo / acima</td></tr>
+  <tr><td><kbd>Esc</kbd> e <kbd>M</kbd> / <kbd>Y</kbd></td><td>Transforma em texto (Markdown) / código</td></tr>
+  <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Salva o caderno</td></tr></table>
+</section>
+</body></html>

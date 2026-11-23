@@ -1,0 +1,7 @@
+ipykernel
+jupysql
+psycopg[binary]
+sqlalchemy
+pandas
+nbclient
+nbformat
